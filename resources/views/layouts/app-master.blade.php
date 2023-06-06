@@ -24,7 +24,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    {{-- <link href="{!! url('assets/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet"> --}}
+    <link href="{!! url('assets/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">
 
 
 
