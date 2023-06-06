@@ -15,8 +15,7 @@ class Template extends Model
 
     protected $fillable = [
         'name',
-        // 'number_of_questions',
-        // 'template_name',
+   
     ];
 
     public function exams()

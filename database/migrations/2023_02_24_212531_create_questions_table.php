@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->text('question')->nullable();
             $table->text('answer')->nullable();
-            // $table->string('')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')
             ->references('id')

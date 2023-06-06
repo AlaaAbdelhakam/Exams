@@ -4,7 +4,7 @@
     <h1 class="mb-3">Candidates Platform</h1>
 
     <div class="bg-light p-4 rounded">
-        <h1>score users</h1>
+        <h1 style="color: black;">score users</h1>
         <div class="lead">
 
         </div>
@@ -14,14 +14,7 @@
                 @method('patch')
                 @csrf
 
-                {{-- <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input value="{{ $user->username }}" type="text" class="form-control" name="username"
-                            placeholder="Username" required>
-                        @if ($errors->has('username'))
-                            <span class="text-danger text-left">{{ $errors->first('username') }}</span>
-                        @endif
-                    </div> --}}
+               
                 <div class="mb-3">
                     <label for="candidate" class="form-label">Candidate</label>
                     <select class="form-control" name="name" required>
@@ -49,8 +42,7 @@
                     @endif
                 </div>
 
-                {{-- <button type="submit" class="btn btn-primary">Update user</button> --}}
-                {{-- <a href="{{ route('users.index') }}" class="btn btn-default">Cancel</button> --}}
+              
 
         </div>
 
@@ -84,31 +76,18 @@
 
 
                 <td>
-                    {{-- <a class="btn btn-info btn-sm" href="{{ route('roles.show', $role->id) }}">true</a> --}}
-                    <a class="btn btn-primary btn-sm" href="">true</a>
+                    <a class="btn btn-info btn-sm" href="">true</a>
                     <a class="btn btn-danger btn-sm" href="">false</a>
 
                 </td>
-                {{-- <td>
-                        {{-- <a class="btn btn-primary btn-sm" href="{{ route('roles.edit', $role->id) }}">false</a> --}}
-
-                {{-- </td> --}}
+                
                 </form>
             </tr>
         </tbody>
     </table>
 
     <div class="d-flex">
-        {{-- {{$users->links() }} --}}
-        {{-- {{$answers->links() }}
-            {{-- {{$questions->links() }} --}}
-        {{-- {{$exams->links() }} --}}
-
-        {{-- {!! $users->links() !!}
-            {{-- {!! $answers->links() !!} --}}
-        {{-- {!! $questions->links() !!} --}}
-        {{-- {!! $exams->links() !!} --}}
-
+       
     </div>
 
     </div>

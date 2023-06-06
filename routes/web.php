@@ -13,13 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// Auth::routes();
 Auth::routes(['register' => false,'login' => false]);
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {   
@@ -33,7 +28,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::get('/Candidatelogin', 'CandidateLogin@show')->name('login.show.candidate');
     Route::post('/Cadidatelogin', 'CandidateLogin@login')->name('login.perform.candidate');
 
-
+    Route::get('/image', 'PostsController@imageindex')->name('image.index');
+    Route::post('/image', 'PostsController@image')->name('image.store');
     
     Route::group(['middleware' => ['guest']], function() {
         /**->middleware('throttle:1,120')
@@ -41,7 +37,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');
-
+      
         /**
          * Login Routes
          */
@@ -83,14 +79,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             Route::delete('/{post}/delete', 'PostsController@destroy')->name('posts.destroy');
             Route::patch('/{id}/finish', 'PostsController@finish')->name('posts.finish');
-            Route::get('/image', 'PostsController@imageindex')->name('image.index');
-            Route::post('/image', 'PostsController@image')->name('image.store');
-
-
+           
+           
             
         });
         Route::get('/examscores', 'PostsController@examscores')->name('examscores');
         
+       
         Route::resource('roles', RolesController::class);
         Route::resource('permissions', PermissionsController::class);
     });

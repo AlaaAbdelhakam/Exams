@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('template', function (Blueprint $table) {
             $table->id();
-            // $table->string('category')->nullable();
-            // $table->integer('number_of_questions')->nullable();
+           
             $table->string('name')->nullable();
 
             $table->timestamps();

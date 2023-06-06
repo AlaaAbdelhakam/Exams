@@ -38,10 +38,7 @@ class Question extends Model
     public function examAnswer() {
         return $this->answer;
     }
-    // public function next()
-    // {
-    //     return static::where($this->getKeyName(), '>', $this->getKey())->first();
-    // }
+   
     public function examanswers()
     {
         return $this->hasMany(ExamAnswers::class);

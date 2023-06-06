@@ -18,8 +18,6 @@ return new class extends Migration
             $table->text('question');
             $table->unsignedBigInteger('question_id');
 
-            // $table->text('answers');
-            // $table->string('question_id');
             $table->text('possible_answer');
             $table->foreign('question_id')
             ->references('id')

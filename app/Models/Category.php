@@ -14,8 +14,7 @@ class Category extends Model
 
     protected $fillable = [
         'name',
-        // 'number_of_questions',
-        // 'template_name',
+       
     ];
     public function questions()
     {
